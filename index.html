@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Aparecida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="logo.png" rel="shortcut icon">
+  <script src="https://kit.fontawesome.com/452e7553c2.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+  <button class="toggle-menu" id="menu-toggle">
+  <span></span>
+</button>
+
+  <nav id="menu">
+  <ul class="main-nav">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#serviço">Serviços</a></li>
+    <li><a href="#pacotes">Pacotes</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="notass/index.php">Notas</a></li>
+  </ul>
+</nav>
+
+
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const menuLinks = document.querySelectorAll('#menu .main-nav a'); // Seleciona todos os links dentro do menu
+
+  // Função para abrir e fechar o menu
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('open');
+  });
+
+  // Adiciona um event listener para cada link do menu
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove as classes 'active' e 'open' para fechar o menu
+      toggle.classList.remove('active');
+      menu.classList.remove('open');
+    });
+  });
+});
+
+  </script>
+
+<main class="pagina">
+<section id="inicio" class="pagina-inicial">
+  <h1>Maria</h1>
+  <h2>Machado</h2>
+  <p>Para se sentir linda todos os dias — confie na Maria!</p>
+
+  <button class="fa-brands fa-whatsapp" class="whatsapp-button" onclick="window.open('https://wa.me/5544999065912?text=Ol%C3%A1!%20vim%20pelo%20site', '_blank')"> Whatsapp</button>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/share/1G6zumJuEr/?mibextid=wwXIfr" target="_blank">
+    <img class="icon" src="facebook.png"></a>
+
+    <a href="https://www.instagram.com/mariamachado.unhas?igsh=MXRldzFzanJnODJjYw==" target="_blank">
+     <img class="icon" src="instagram.png"></a>
+
+  </div>
+  <div class="scroll-indicator">
+  <i class="fa-solid fa-chevron-down"></i>
+</div>
+
+
+
+   
+</section>
+</main>
+
+<section id="serviço" class="pagina-servicos">
+  <div class="servicos-intro">
+    <h2>Serviços</h2>
+    <p>Cuidamos de você com carinho, profissionalismo e produtos de alta qualidade.</p>
+  </div>
+
+  <div class="servicos-lista">
+    <div class="servico">
+      <img src="manicure.jpg" alt="Unhas" />
+      <h3>Nail designer</h3>
+      <p>Tratamento completo para mãos e pés com esmaltação perfeita.</p>
+      <button class="btn-servico" onclick="window.open('https://wa.me/5544999065912?text=Ol%C3%A1!%20tenho%20interesse%20em%20marcar%20um%20hor%C3%A1rio%20para%20Manicure%20e%20Pedicure', '_blank')">Contratar</button>
+    </div>
+
+    <div class="servico">
+      <img src="pé.jpg" alt="Plástica dos pés" />
+      <h3>plástica dos pés</h3>
+      <p>A plástica dos pés trata problemas como calos e ressecamento, unindo saúde e estética.</p>
+      <button class="btn-servico" onclick="window.open('https://wa.me/5544999065912?text=Ol%C3%A1!%20Tenho%20interesse%20em%20marcar%20um%20hor%C3%A1rio%20para%20fazer%20pl%C3%A1stica%20dos%20p%C3%A9s', '_blank')">Contratar</button>
+    </div>
+
+    <div class="servico">
+      <img src="sombrancelha.jpg" alt="Sobrancelha" />
+      <h3>Design de Sobrancelhas</h3>
+      <p>Realce sua beleza com um design sob medida para o seu rosto.</p>
+      <button class="btn-servico" onclick="window.open('https://wa.me/5544999065912?text=Ol%C3%A1!%20Tenho%20interesse%20em%20marcar%20um%20hor%C3%A1rio%20para%20fazer%20as%20sobrancelhas', '_blank')">Contratar</button>
+    </div>
+
+    <div class="servico">
+      <img src="depilação.jpg" alt="Depilação" />
+      <h3>Depilação</h3>
+      <p>Pele lisinha e bem cuidada com uma depilação que respeita a sua sensibilidade.</p>
+      <button class="btn-servico" onclick="window.open('https://wa.me/5544999065912?text=Ol%C3%A1!%20Tenho%20interesse%20em%20marcar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20depila%C3%A7%C3%A3o', '_blank')">Contratar</button>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes" class="pacotes">
+  <div class="pacote"> <h2>Nossos pacotes</h2>
+    <p>Mais que unhas feitas, é rotina de autocuidado. Escolha seu pacote!</p></div>
+
+  <div class="plans-container">
+    <div class="plan-card">
+      <h2>Pacote Completo</h2>
+      <p>Manicure e Pedicure</p>
+      <p>4-mãos e 2-pés</p>
+      <div class="price">R$ 200/mês</div>
+     <button class="btn" onclick="window.open('https://wa.me/5544999065912?text=Oii%2C%20tenho%20interesse%20no%20Pacote%20Completo!', '_blank')">Contratar</button>
+    </div>
+
+    <div class="plan-card">
+      <h2>Pacote Básico</h2>
+      <p>Manicure e Pedicure</p>
+      <p>4-mãos e 1-pés</p>
+      <div class="price">R$ 175/mês</div>
+      <button class="btn" onclick="window.open('https://wa.me/5544999065912?text=Oii%2C%20tenho%20interesse%20no%20Pacote%20B%C3%A1sico!', '_blank')">Contratar</button>
+    </div>
+
+    <div class="plan-card">
+      <h2>Pacote Manicure</h2>
+      <p>Manicure</p>
+      <p>4-mãos</p>
+      <div class="price">R$ 140/mês</div>
+      <button class="btn" onclick="window.open('https://wa.me/5544999065912?text=Oii%2C%20tenho%20interesse%20no%20Pacote%20Manicure!', '_blank')">Contratar</button>
+
+    </div>
+  </div>
+
+</section>
+
+<footer id="contato" class="rodape">
+  <div class="rodape-container">
+    <!-- Botão para abrir formulário -->
+    <div class="rodape-coluna esquerda">
+      <h3 class="conteudo-secundario-titulo">Contato</h3>
+      <button class="botão" onclick="abrirModal()">Abrir Formulário</button>
+    </div>
+
+    <!-- Endereço -->
+    <div class="rodape-coluna direita">
+      <h3 class="conteudo-secundario-titulo">Localização</h3>
+      <p class="footer-address">
+        📍 Rua Santa Cruz, 1466 - Centro, Campo Mourão - PR, 87303-210
+      </p>
+      <button class="map-button" onclick="abrirMapa()">Ver no Mapa</button>
+    </div>
+  </div>
+
+   <div class="rodape-redes">
+  <h3 class="conteudo-secundario-titulo">Redes</h3>
+
+  <div class="rede-item">
+    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+    <span class="footer-address">mariamachado.unhas</span>
+  </div>
+
+  <div class="rede-item">
+    <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
+    <span class="footer-address">Maria Aparecida Machado</span>
+  </div>
+</div>
+
+   
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copy-container">
+
+    <small class="footer-copy">© 2025 Iorino</small>
+  </div>
+
+  <!-- Modal do formulário -->
+  <div id="form-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h3 class="conteudo-secundario-titulo">Envie uma mensagem</h3>
+      <form action="https://formspree.io/f/xzzewzzp" method="POST">
+        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+        <input type="email" name="email" id="email" placeholder="E-mail" required>
+        <textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+        <button class="botão" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

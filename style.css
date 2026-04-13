@@ -1,0 +1,560 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+  }
+  
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-menu span,
+.toggle-menu span::before,
+.toggle-menu span::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  transition: 0.3s;
+  background: #221815;
+}
+
+.toggle-menu span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle-menu span::before {
+  top: -10px;
+  position: absolute;
+}
+
+.toggle-menu span::after {
+  bottom: -10px;
+  position: absolute;
+}
+
+.toggle-menu.active span {
+  background: transparent;
+}
+
+.toggle-menu.active span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.toggle-menu.active span::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d8d4cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+}
+
+#menu.open {
+  transform: translateX(0);
+}
+
+#menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+#menu ul li {
+  margin: 20px 0;
+}
+
+#menu ul li a {
+  color: #5a3e36;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+  .pagina-inicial {
+	background: url('backgrand.gif');
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+  body {
+	font-family: 'Tenor Sans', sans-serif;
+	
+	
+	color: #5a3e36;
+	
+	
+  }
+
+  h1, h2 {
+	font-family: 'Playfair Display', serif;
+  }
+
+  h1 {
+	font-size: 6em;
+
+  }
+
+  h2 {
+	font-size: 6em;
+	margin-bottom: 10px;
+  }
+
+  p {
+	margin-top: 10px;
+	font-size: 2em;
+	margin-bottom: 50px;
+   
+  }
+
+  .pagina-inicial button {
+	
+	font-size: 12px;
+	margin: 20px 0;
+	padding: 10px 30px;
+	background-color: white;
+	border: none;
+	border-radius: 25px;
+	font-weight: bold;
+	color: #5a3e36;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+	transition: background 0.3s;
+  }
+
+  .pagina-inicial button:hover {
+	background-color:#5a3e36;
+	color: white;
+  }
+
+  .social-icons {
+	display: flex;
+	
+	gap: 15px;
+	justify-content: center;
+  }
+
+  .social-icons a {
+	color: #5a3e36;
+	text-decoration: none;
+	font-size: 1.5em;
+  }
+
+.icon {
+width: 30px;
+height: 30px;
+margin: 10px;
+margin-top: 20px;
+margin-bottom: 80px;
+}
+
+.icon:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  font-size: 24px;
+  color: #917166;
+  z-index: 100;
+}
+
+/* Animação de "pulo" */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+.pagina-servicos {
+	background-color:#5a3e36;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 20px;
+	color: #ffffff;
+	text-align: center;
+	border-top: solid #5a3e36;
+	box-shadow: 4px 5px 4px  #000000(22, 19, 19, 0.301);
+
+  }
+  
+  .servicos-intro h2 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+  }
+  
+  .servicos-intro p {
+	font-size: 1.2rem;
+	margin-bottom: 40px;
+  }
+  
+  .servicos-lista {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+  }
+
+ 
+  
+ .servico {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+ }
+  
+  .servico:hover {
+	transform: translateY(-5px);
+  }
+  
+  .servico img {
+	width: 150px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	border-radius: 12px;
+	border: solid  #7a4c41;
+  }
+  
+  .servico h3 {
+	font-size: 1.5rem;
+	color: #7a4c41;
+	margin-bottom: 10px;
+  }
+  
+  .servico p {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; 
+  margin-bottom: 15px; 
+}
+
+  .btn-servico{
+	justify-items: center;
+	align-items: center;
+	margin-bottom:40px;
+	background-color: #412b21;
+	color: #ffffff;
+	border: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	text-transform: uppercase;
+ }
+
+ .btn-servico:hover{
+	background-color:  #ffffff;
+	color: #412b21;
+	border: solid #412b21 ;
+  }
+  .pacotes{
+	background: url('backgrand.gif') no-repeat center center/cover;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 20px;
+	color: #5a3e36;
+	text-align: center;
+	border-top: solid #5a3e36;
+	box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .pacote h2 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+  }
+  
+  .pacote p {
+	font-size: 1.2rem;
+	margin-bottom: 40px;
+  }
+ 
+  .plans-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+  }
+
+  .plan-card {
+	background-color: rgba(212, 196, 182, 0.137);
+	border: 1px solid #5a3e36;
+	border-radius: 12px;
+	padding: 2rem;
+	width: 300px;
+	backdrop-filter: blur(8px);
+	text-align: center;
+	box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .plan-card h2 {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+  }
+
+  .plan-card p {
+	font-size: 1rem;
+	margin: 0.5rem 0;
+  }
+
+  .price {
+	font-size: 2rem;
+	margin: 1.5rem 0;
+	color: #412b21;
+  }
+
+  .btn {
+	background-color: #fff;
+	color: #412b21;
+	border: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	text-transform: uppercase;
+  }
+
+  .btn:hover {
+	background-color:  #412b21;
+	color: #ffffff;
+  }
+
+
+/* Rodapé e colunas */
+.rodape {
+  background-color: #5a3e36;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px 20px;
+  flex-direction: row;
+}
+
+.rodape-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.rodape-coluna {
+  flex-direction: row;
+}
+
+.conteudo-secundario-titulo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* Botões */
+.botão,
+.map-button {
+  background-color: #412b21;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botão:hover,
+.map-button:hover {
+ background-color: #ffffff;
+  color: #412b21;
+  border: solid #412b21;
+}
+
+/* Endereço */
+.footer-address {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* Copyright */
+.footer-copy-container {
+  width: 100%;
+
+  margin-top: 40px;
+  border-top: 1px solid #5a3e36;
+  padding-top: 20px;
+
+}
+
+.footer-copy {
+  color: #ffffff;
+  font-size: 0.9rem;
+  
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  color: #2d1a13;
+}
+
+/* Botão fechar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #5a3e36;
+  cursor: pointer;
+}
+
+/* Campos do formulário dentro do modal */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 12px;
+  border: 1px solid #5a3e36;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #2d1a13;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.rodape-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  gap: 12px;
+  
+}
+
+/* Cada rede social */
+.rede-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.rede-item i {
+  font-size: 1.2rem;
+}
+
+/* Texto do endereço (Instagram/Facebook) */
+.footer-address {
+  color: #ffffff;
+}
+
+/* Para colocar essa div no canto direito do rodapé */
+.rodape-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.rodape-coluna,
+.rodape-redes {
+  flex: 1 1 300px;
+}
+
+
+
+  @media (max-width: 768px) {
+	.rodapé {
+	  flex-direction: column;
+	  align-items: center;
+	}
+
+	form,
+	.mapa-container {
+	  width: 100%;
+	}
+
+	button[type="submit"] {
+	  width: 100%;
+	}
+  }
+   
