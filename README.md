@@ -1,4 +1,4 @@
-# Site Mostruário de Serviços | Trabalho 2º semestre ADS
+# Site Mostruário de Serviços | Trabalho 2º módulo ADS
 
 Projeto front-end desenvolvido para apresentar serviços de forma moderna, visual e responsiva.  
 Ideal para profissionais autônomos ou portfólio digital.
